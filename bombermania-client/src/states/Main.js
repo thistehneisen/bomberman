@@ -43,10 +43,10 @@ Retoosh.Main.prototype = {
         footer.width = Retoosh.WIDTH;
         footer.height = Retoosh.HEIGHT * 0.07;
         footer.y = (header.height + center.height);
-        footer.inputEnabled = true;
-        footer.input.useHandCursor = true; 
+        //footer.inputEnabled = true;
+        //footer.input.useHandCursor = true; 
         footer.events.onInputDown.add(function() {
-            window.open("http://www.bomberworld.io", "_blank");
+            //window.open("https://nils.digital/", "_blank");
         }, this);
         bg_group.add(footer);
 
@@ -112,7 +112,7 @@ Retoosh.Main.prototype = {
         -------------------------------------------------------
         */
 
-        var community_btn = new UIButton( this.game, 350, 70, 0x000000, '', 'community');
+        /*var community_btn = new UIButton( this.game, 350, 70, 0x000000, '', 'community');
         community_btn.x = ( Retoosh.WIDTH - community_btn.width ) * 0.5;
         community_btn.y = ( Retoosh.HEIGHT - community_btn.height ) * 0.5 + 310;
 
@@ -122,7 +122,7 @@ Retoosh.Main.prototype = {
 
         var panels_margin = 40;
         var panels_height = Retoosh.HEIGHT * 0.8; //- upper_menu.height - lower_menu.height - panels_margin * 2;
-        var panels_width = 550;
+        var panels_width = 550;*/
 
         /*
         -------------------------------------------------------
