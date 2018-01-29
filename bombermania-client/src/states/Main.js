@@ -118,11 +118,11 @@ Retoosh.Main.prototype = {
 
         community_btn.onPress = function(){
             window.open("http://www.bomberworld.io/forum/news.php", "_blank");
-        };
+        };*/
 
         var panels_margin = 40;
         var panels_height = Retoosh.HEIGHT * 0.8; //- upper_menu.height - lower_menu.height - panels_margin * 2;
-        var panels_width = 550;*/
+        var panels_width = 550;
 
         /*
         -------------------------------------------------------
