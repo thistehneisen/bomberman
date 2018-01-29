@@ -1,0 +1,36 @@
+{
+  "name": "@orange-games/phaser-nineslice",
+  "author": "OrangeGames",
+  "version": "2.0.0",
+  "description": "NineSlice plugin for Phaser.io!",
+  "contributors": [
+    {
+      "name": "Ale Bles",
+      "email": "a.bles@orangegames.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:orange-games/phaser-nineslice.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/orange-games/phaser-nineslice/raw/master/LICENSE"
+    }
+  ],
+  "config": {
+    "name": "phaser-nineslice"
+  },
+  "devDependencies": {
+    "grunt": "1.0.x",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ts": "^6.0.0-beta.11",
+    "phaser": "2.6.2",
+    "typescript": "2.1.x"
+  }
+}

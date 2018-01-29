@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Bomberworld.io - Online Multiplayer Bomberman</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/game.css">
+
+	<!--<script src="/node_modules/auth0-js/build/auth0.min.js"></script>
+	<script type="text/javascript">
+	  var webAuth = new auth0.WebAuth({
+	    domain: 'flint0.auth0.com',
+	    clientID: 'lrFXTgeVe3VhqLht5FCFidAgwoGMb4Vz',
+
+		connectionScopes: {
+      		'facebook': ['openid', 'nickname']
+    	}
+	  	});
+	</script>-->
+
+    <script src="/lib/phaser.min.js"></script>
+	<script src="/plugins/orange-games/phaser-nineslice/build/phaser-nineslice.js"></script>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/src/modules/helper/SocketHandler.js"></script>
+
+	<script src="/src/GameConfig.js"></script>
+
+    <script src="/src/states/Boot.js"></script>
+    <script src="/src/states/Preloader.js"></script>
+
+  	<script src="/src/modules/gameobj/ColorRect.js"></script>
+	<script src="/src/modules/ui/UIButton.js"></script>
+	<script src="/src/modules/ui/menu/UpperMenu.js"></script>
+	<script src="/src/modules/ui/menu/LowerMenu.js"></script>
+	<script src="/src/modules/ui/menu/TabbedPanel.js"></script>
+	<script src="/src/modules/ui/menu/LoginContent.js"></script>
+	<script src="/src/modules/ui/menu/RegisterContent.js"></script>
+	<script src="/src/modules/ui/menu/FriendsContent.js"></script>
+	<script src="/src/modules/ui/menu/RequestsContent.js"></script>
+	<script src="/src/states/Main.js"></script>
+
+	<script src="/plugins/orange-games/phaser-input/build/phaser-input.js"></script>
+
+	<script src="/src/modules/helper/SocketClient.js"></script>
+
+	<script src="/src/modules/ui/ingame/MessageSender.js"></script>
+	<script src="/src/modules/ui/ingame/ChatPanel.js"></script>
+	<script src="/src/modules/gameobj/ExplosionChain.js"></script>
+	<script src="/src/modules/gameobj/Bomb.js"></script>
+	<script src="/src/modules/gameobj/Bomberman.js"></script>
+	<script src="/src/modules/gameobj/PowerUp.js"></script>
+	<script src="/src/modules/gameobj/Destructable.js"></script>
+	<script src="/src/modules/gameobj/Indestructable.js"></script>
+	<script src="/src/modules/helper/Map.js"></script>
+	<script src="/src/modules/helper/MapLoader.js"></script>
+    <script src="/src/states/Game.js"></script>
+
+	<script>
+		var game;
+
+	    function initGame() {
+	        game = new Phaser.Game(Retoosh.WIDTH, Retoosh.HEIGHT, Phaser.CANVAS, 'game-area');
+	        game.state.add('Boot', Retoosh.Boot);
+	        game.state.add('Preloader', Retoosh.Preloader);
+			game.state.add('Main', Retoosh.Main);
+	        game.state.add('Game', Retoosh.Game);
+
+	        game.state.start('Boot');
+	    }
+
+		function resizeGame() {
+			var width, height;
+			if( window.innerWidth < window.innerHeight ){
+				width = window.innerWidth;
+				height = Retoosh.HEIGHT * width /Retoosh.WIDTH;
+			}
+			else{
+				height = window.innerHeight;
+				width = Retoosh.WIDTH * height /Retoosh.HEIGHT;
+			}
+
+			game.width = width;
+			game.height = height;
+
+			if(game.renderYpe === 1){
+				game.renderer.resize(width, height);
+				Phaser.Canvas.setSmoothingEnabled(game.context, false);
+			}
+		}
+
+	</script>
+
+</head>
+<body onload="initGame()" onresize="resizeGame()">
+
+
+	<div id="page-container">
+	    <!--<div id="chat-panel">Chat Panel</div>-->
+	    <div id="game-area"></div>
+	</div>
+
+</body>
+</html>
